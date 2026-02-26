@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feedback</h1>
+    <div>
+        <button id="submit">submit Feedback</button>
+    </div>
+    <p id="msg" class="success"></p>
+    <script>
+        const response=document.getElementById("submit");
+        const msg=document.getElementById("msg");
+        response.addEventListener ("click", function (){
+            msg.innerText="Thank you! Your feedback has been submitted successfully.";
+        });
+    </script>
+</body>
+</html>
