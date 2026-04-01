@@ -1,0 +1,50 @@
+﻿@model List<TagHelpersAndRouting.Models.ContactInfo>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "Layout";
+}
+
+    <h3>All Contact Details</h3>
+
+    <a class="btn btn-danger" asp-route="AddContact">Add Contact</a>
+    <br />
+
+    @if (Model != null && Model.Any())
+    {
+        <table class="table table-responsive table-bordered ">
+            <thead>
+                <tr class="table-primary">
+                    <th>ContactId</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>CompanyName</th>
+                    <th>EmailId</th>
+                    <th>MobileNo</th>
+                    <th>Designation</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var contact in Model)
+                {
+                    <tr class="table-success">
+                        <td>@contact.ContactId</td>
+                        <td>@contact.FirstName</td>
+                        <td>@contact.LastName</td>
+                        <td>@contact.CompanyName</td>
+                        <td>@contact.EmailId</td>
+                        <td>@contact.MobileNo</td>
+                        <td>@contact.Designation</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+    }
+    else
+    {
+        <p>No contacts available.</p>
+        
+    }
+  
