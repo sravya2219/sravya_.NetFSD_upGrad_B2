@@ -1,0 +1,25 @@
+﻿@model StudentDemo.Models.Calculator
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<html>
+    <head>
+        <title>Addition</title>
+        </head>
+        <body>
+    <form asp-route="Saved" method="post">
+        <div>
+            <label>Number 1:</label>
+            <input asp-for="Number1" />
+        </div>
+
+        <div>
+            <label>Number 2:</label>
+            <input asp-for="Number2" />
+        </div>
+
+        <button type="submit">Addition</button>
+
+        
+    </form>
+        </body>
+</html>

@@ -1,0 +1,52 @@
+﻿@model TagHelpersAndRouting.Models.ContactInfo
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "Layout";
+}
+
+    <a asp-route="Data" class="btn-close-white">Contact List</a>
+
+    <h3>Enter Contact Details</h3>
+
+    <form asp-route="SaveContact" method="post">
+
+        <div>
+            <label>Contact Id:</label>
+            <input asp-for="ContactId" placeholder="enter contact id" />
+        </div>
+
+        <div>
+            <label>First Name:</label>
+            <input asp-for="FirstName" placeholder="enter first name" />
+        </div>
+
+        <div>
+            <label>Last Name:</label>
+            <input asp-for="LastName" placeholder="enter last name" />
+        </div>
+        <div>
+            <label>Company Name:</label>
+            <input asp-for="CompanyName" placeholder="enter company name" />
+        </div>
+
+        <div>
+            <label>Email Id:</label>
+            <input asp-for="EmailId" placeholder="enter email id" />
+        </div>
+
+        <div>
+            <label>Mobile No:</label>
+            <input asp-for="MobileNo" placeholder="enter mobile number" />
+        </div>
+
+        <div>
+            <label>Designation:</label>
+            <input asp-for="Designation" placeholder="enter designation" />
+        </div>
+
+        <div>
+            <input type="submit" value="Add Contact" class="btn-close-white"/>
+        </div>
+
+    </form>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ Section</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            width: 600px;
+            margin: 40px auto;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+        }
+
+        .question {
+            background-color: #f2f2f2;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .answer {
+            display: none;   /* Hidden initially */
+            padding: 10px;
+            background-color: #fafafa;
+            border-left: 3px solid #007bff;
+        }
+
+        .active {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+    <div class="question">1. What courses do you offer?</div>
+    <div class="answer">We offer Web Development, Java, Python, and Data Science courses.</div>
+</div>
+
+<div class="faq-item">
+    <div class="question">2. What is the course duration?</div>
+    <div class="answer">Course duration ranges from 2 to 6 months.</div>
+</div>
+
+<div class="faq-item">
+    <div class="question">3. Do you provide certificates?</div>
+    <div class="answer">Yes, we provide course completion certificates.</div>
+</div>
+
+<div class="faq-item">
+    <div class="question">4. Is placement support available?</div>
+    <div class="answer">Yes, we provide placement assistance.</div>
+</div>
+
+<div class="faq-item">
+    <div class="question">5. Are classes available online?</div>
+    <div class="answer">Yes, both online and offline classes are available.</div>
+</div>
+
+<script>
+$(document).ready(function(){
+
+    $(".question").click(function(){
+
+        var answer = $(this).next(".answer");
+
+        if(answer.is(":visible")){
+            answer.hide();
+            $(this).removeClass("active");
+        } else {
+            answer.show();
+            $(this).addClass("active");
+        }
+
+    });
+
+});
+</script>
+
+</body>
+</html>

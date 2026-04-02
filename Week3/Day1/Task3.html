@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="cart">
+    Cart Items: <span id="cartCount">0</span>
+</div>
+<div id="productList">
+    <div id="product">
+        <h2>Laptop</h2>
+        <p>Price: 500000</p>
+        <button id="addBtn">Add to Cart</button>
+         <span class="added-msg"></span>
+    </div>
+     <div id="product">
+        <h2>Mobile</h2>
+        <p>Price: 50000</p>
+        <button id="addBtn">Add to Cart</button>
+         <span class="added-msg"></span>
+    </div>
+     <div id="product">
+        <h2>Headphones</h2>
+        <p>Price: 1000</p>
+        <button id="addBtn">Add to Cart</button>
+         <span class="added-msg"></span>
+    </div>
+     <div id="product">
+        <h2>Smart watch</h2>
+        <p>Price: 5000</p>
+        <button id="addBtn">Add to Cart</button>
+         <span class="added-msg"></span>
+    </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            var count=0;
+             $("#productList").on("click", "#addBtn", function(){
+
+        count++;
+
+        // Update cart counter
+        $("#cartCount").text(count);
+
+        // Disable button
+        $(this).prop("disabled", true);
+
+        // Change button text
+        $(this).text("Added");
+
+        // Add attribute (example usage)
+        $(this).attr("data-added", "true");
+
+        // Show confirmation message
+        $(this).siblings(".added-msg").text("✔ Added to cart");
+
+    });
+        })
+    </script>
+</body>
+</html>

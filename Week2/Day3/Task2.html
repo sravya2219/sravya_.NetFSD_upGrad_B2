@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .light{
+            background-color:#ffffff;
+            color: black;
+        }
+        .dark{
+            background-color: black;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blog Theme</h1>
+    <div>
+        <button id="theme">Theme change</button>
+    </div>
+    <script>
+        const body=document.body;
+        const button=document.getElementById("theme");
+        function loadTheme(){
+            const savedTheme=localStorage.getItem("theme");
+            if(savedTheme){
+                body.className=savedTheme;
+
+            }
+            else{
+                body.className="light";
+            }
+        }
+        function toggleTheme(){
+            if(body.classList.contains("light")){
+                body.className="dark";
+                localStorage.setItem("theme","dark");
+            }
+            else{
+                body.className="light";
+                localStorage.setItem("theme","light")
+            }
+        }
+       button.addEventListener("click", toggleTheme);
+       loadTheme();
+    </script>
+</body>
+</html>

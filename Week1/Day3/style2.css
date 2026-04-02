@@ -1,0 +1,55 @@
+.main{
+
+}
+h1{
+    color: firebrick;
+    text-align: center;
+}
+.res{
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+}
+.first,.second,.third{
+     /* border: 2px solid gainsboro; */
+    gap: 20px;
+    text-align: center;
+    margin: 30px;
+    padding: 10px;
+    height: 300px;
+    font-size: 20px;
+
+
+}
+.first{
+    color: blueviolet;
+    margin: 10px;
+}
+.second{
+    color: aquamarine;
+    margin: 10px;
+}
+.third{
+    color: aqua;
+    margin: 10px;
+}
+button{
+    background-color: blue;
+    padding: 10px;
+    border-radius: 5px;
+    color: pink;
+    cursor: pointer;
+}
+button:hover{
+    background-color: aliceblue;
+}
+p{
+    line-height: 30px;
+    word-spacing: 5px;
+}
+@media (max-width:600px){
+    .res{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <style>
+        .error{
+            color: red;
+        }
+        .success{
+            color: green;
+        }
+      </style>
+</head>
+<body>
+    <h1>Student feedback form</h1>
+    <form action="" id="student">
+        <label for="">enter name:</label>
+        <input type="text" placeholder="enter name" id="name">
+        <span class="error" id="nameError"></span>
+        <br><br>
+        <label for="">email:</label>
+        <input type="text" placeholder="enter email" id="email">
+         <span class="error" id="emailError"></span><br><br>
+        <label for="">course Rating:</label>
+        <select name="" id="rating">
+        <option value="">select</option>
+        <option value="">excellent</option>
+        <option value="">good</option>
+        <option value="">average</option>
+        <option value="">poor</option>
+        </select>
+        <br><br>
+        <label for="">comments:</label>
+       <textarea name="" id="text"></textarea><br><br>
+       <button id="btn" type="submit">submit</button>
+    </form>
+    <div id="msg">
+
+    </div>
+    <script>
+        $(document).ready(function(){
+             $("#btn").click(function(e){
+                e.preventDefault();
+
+            $(".error").text("");
+            $("#msg").text("");
+
+            // get input values
+            var name=$("#name").val();
+            var email=$("#email").val();
+            var isValid=true;
+            if(name===""){
+                $("#nameError").text("please enter correct name");
+                isValid =false;
+            }
+            if(email===""){
+                $("#emailError").text("please enter correct email");
+                isValid=false;
+            }
+            if(isValid){
+                $("#msg").addClass("success")
+                .text("Thank your feedback submitted");
+                 $("#student")[0].reset();
+            }
+            // $("#student")[0].reset();
+    
+          });
+        });
+
+    </script>
+</body>
+</html>

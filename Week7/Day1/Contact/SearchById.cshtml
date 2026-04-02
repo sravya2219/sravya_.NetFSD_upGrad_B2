@@ -1,0 +1,14 @@
+﻿@model TagHelpersAndRouting.Models.ContactInfo
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "Layout";
+}
+  <a asp-route="Data" class="btn btn-outline-danger">Contact List</a>
+        <h3>Contact Details</h3>
+        <h4>ContactId: @Model.ContactId</h4>
+        <h4>FirstName: @Model.FirstName</h4>
+        <h4>LastName: @Model.LastName </h4>
+        <h4>CompanyName: @Model.CompanyName</h4>
+        <h4>Mobile no: @Model.MobileNo</h4>
+        <h4>Designation: @Model.Designation</h4>
+   
