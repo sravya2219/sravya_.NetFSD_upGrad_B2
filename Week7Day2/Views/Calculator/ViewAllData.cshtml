@@ -1,0 +1,35 @@
+﻿@model List<StudentDemo.Models.Calculator>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<html>
+<head>
+    <title>Addition</title>
+</head>
+<body>
+    <h3>Calculation </h3>
+    <a asp-route="Addition">Addition</a><br />
+     <a asp-route="Subtract">Subtraction</a><br />
+    <a asp-route="Mul">Multiplication</a><br />
+    <a asp-route="Div">Division</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Number 1: </th>
+                <th>Number 2:</th>
+                <th>Result :</th>
+            </tr>
+        </thead>
+        @{
+                foreach(var num in Model)
+                {
+                    <tr>
+                    <td>@num.Number1</td>
+                    <td>@num.Number2</td>
+                    <td>@num.Result</td>
+                       
+                    </tr>
+                }
+            }
+    </table>
+</body>
+</html>

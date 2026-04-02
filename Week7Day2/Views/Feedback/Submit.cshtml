@@ -1,0 +1,23 @@
+﻿@model StudentDemo.Models.Feedback
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h2>Feedback Form</h2>
+
+<form asp-action="Submit" method="post">
+    <div>
+        <label>Name:</label>
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <label>Comments:</label>
+        <textarea asp-for="Comments"></textarea>
+    </div>
+
+    <div>
+        <label>Rating (1–5):</label>
+        <input asp-for="Rating" type="number" min="1" max="5" />
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
