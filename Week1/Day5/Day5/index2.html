@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Info Display</title>
+</head>
+<body>
+    <h2>User Info Display</h2>
+    <button id="showUserBtn">Show User Info</button>
+    <div id="userDetails"></div>
+
+    <script>
+        var user = {
+            name: "Rahul",
+            age: 25,
+            city: "Mumbai"
+        };
+
+        function displayUserInfo(userObj) {
+            var container = document.getElementById("userDetails");
+            container.innerHTML = ""; // Clear previous content
+
+            var pName = document.createElement("p");
+            pName.innerText = "Name: " + userObj.name;
+
+            var pAge = document.createElement("p");
+            pAge.innerText = "Age: " + userObj.age;
+
+            var pCity = document.createElement("p");
+            pCity.innerText = "City: " + userObj.city;
+
+            container.appendChild(pName);
+            container.appendChild(pAge);
+            container.appendChild(pCity);
+        }
+
+        document.getElementById("showUserBtn").addEventListener("click", function() {
+            displayUserInfo(user);
+        });
+    </script>
+</body>
+</html>

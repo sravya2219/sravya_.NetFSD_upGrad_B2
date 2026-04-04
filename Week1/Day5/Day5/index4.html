@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile Manager</title>
+    <style>
+        #studentProfile {
+            border: 1px solid #333;
+            padding: 10px;
+            width: 300px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Profile Manager</h2>
+    <button id="updateMarksBtn">Update Marks</button>
+    <div id="studentProfile"></div>
+
+    <script>
+        // Global student object
+        var student = {
+            name: "Aisha",
+            rollNo: "101",
+            marks: 85
+        };
+
+        function updateStudentProfile(studentObj) {
+            var container = document.getElementById("studentProfile");
+            container.innerHTML = ""; // Clear previous
+
+            var divName = document.createElement("p");
+            divName.innerText = "Name: " + studentObj.name;
+
+            var divRoll = document.createElement("p");
+            divRoll.innerText = "Roll No: " + studentObj.rollNo;
+
+            var divMarks = document.createElement("p");
+            divMarks.innerText = "Marks: " + studentObj.marks;
+
+            container.appendChild(divName);
+            container.appendChild(divRoll);
+            container.appendChild(divMarks);
+        }
+
+        function updateMarks(newMarks) {
+            student.marks = newMarks;
+            updateStudentProfile(student);
+        }
+
+        // Initialize display
+        updateStudentProfile(student);
+
+        // Button to update marks
+        document.getElementById("updateMarksBtn").addEventListener("click", function() {
+            var newMarks = prompt("Enter new marks:");
+            newMarks = parseInt(newMarks);
+            if(!isNaN(newMarks)) {
+                updateMarks(newMarks);
+            } else {
+                alert("Invalid marks entered!");
+            }
+        });
+    </script>
+</body>
+</html>
