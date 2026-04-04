@@ -1,0 +1,14 @@
+C:\Users\aishw\source\repos\ContactManagementSystem\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.deps.json
+C:\Users\aishw\source\repos\ContactManagementSystem\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.runtimeconfig.json
+C:\Users\aishw\source\repos\ContactManagementSystem\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.dll
+C:\Users\aishw\source\repos\ContactManagementSystem\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.pdb
+C:\Users\aishw\source\repos\ContactManagementSystem\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\aishw\source\repos\ContactManagementSystem\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aishw\source\repos\ContactManagementSystem\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\aishw\source\repos\ContactManagementSystem\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\aishw\source\repos\ContactManagementSystem\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\aishw\source\repos\ContactManagementSystem\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.dll
+C:\Users\aishw\source\repos\ContactManagementSystem\DataAccessLayer\obj\Debug\net8.0\refint\DataAccessLayer.dll
+C:\Users\aishw\source\repos\ContactManagementSystem\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.pdb
+C:\Users\aishw\source\repos\ContactManagementSystem\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\aishw\source\repos\ContactManagementSystem\DataAccessLayer\obj\Debug\net8.0\ref\DataAccessLayer.dll

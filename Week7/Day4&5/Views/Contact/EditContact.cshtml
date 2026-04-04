@@ -1,0 +1,39 @@
+﻿@model DataAccessLayer.Models.ContactInfo
+
+<form method="post" action="/contact/edit">
+
+    <input type="hidden" name="ContactId" value="@Model.ContactId" />
+
+    <input name="FirstName" value="@Model.FirstName" /><br/><br/>
+    <input name="LastName" value="@Model.LastName" /><br/><br/>
+    <input name="EmailId" value="@Model.EmailId" /><br/><br/>
+    <input name="MobileNo" value="@Model.MobileNo" /><br/><br/>
+    <input name="Designation" value="@Model.Designation" /><br/><br/>
+
+    <select name="CompanyId">
+        @if(ViewBag.Companies!=null){
+        @foreach (var c in ViewBag.Companies)
+        {
+            <option value="@c.CompanyId"
+                    selected="@(c.CompanyId == Model.CompanyId)">
+                @c.CompanyName
+            </option>
+        }
+        }
+    </select>
+    <br/><br/>
+    <select name="DepartmentId">
+        @if(ViewBag.Departments!=null){
+        @foreach (var d in ViewBag.Departments)
+        {
+            <option value="@d.DepartmentId"
+                    selected="@(d.DepartmentId == Model.DepartmentId)">
+                @d.DepartmentName
+            </option>
+        }
+        }
+    </select>
+    <br/><br/>
+
+    <button type="submit">Update</button>
+</form>

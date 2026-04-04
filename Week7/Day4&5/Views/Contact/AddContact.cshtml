@@ -1,0 +1,34 @@
+﻿@{
+    var companies = ViewBag.Companies;
+    var departments = ViewBag.Departments;
+}
+
+<form method="post">
+
+    <input name="FirstName" placeholder="First Name" /><br/><br/>
+    <input name="LastName" placeholder="Last Name" /><br/><br/>
+    <input name="EmailId" placeholder="Email" /><br/><br/>
+    <input name="MobileNo" placeholder="Mobile" /><br/><br/>
+    <input name="Designation" placeholder="Designation" /><br/><br/>
+
+    <select name="CompanyId">
+        <option value="">Select Company</option>
+        @foreach (var c in companies)
+        {
+            <option value="@c.CompanyId">@c.CompanyName</option>
+        }
+    </select>
+    <br/><br/>
+
+    <select name="DepartmentId">
+        <option value="">Select Department</option>
+        @foreach (var d in departments)
+        {
+            <option value="@d.DepartmentId">@d.DepartmentName</option>
+        }
+    </select>
+    <br/><br/>
+
+    <button type="submit">Save</button>
+
+</form>

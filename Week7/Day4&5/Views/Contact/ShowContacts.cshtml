@@ -1,0 +1,54 @@
+﻿@model List<DataAccessLayer.Models.ContactInfo>
+
+<style>
+    .table-custom {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+        .table-custom th, .table-custom td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .table-custom th {
+            background-color: #f2f2f2;
+        }
+
+        .table-custom tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .table-custom tr:hover {
+            background-color: #f1f1f1;
+        }
+</style>
+
+
+<h2>Contacts</h2>
+
+<a href="/contact/add">Add Contact</a><br/>
+
+<table class="table-custom">
+    <tr>
+        <th>Name</th>
+        <th>Company</th>
+        <th>Department</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.FirstName @item.LastName</td>
+            <td>@item.Company?.CompanyName</td>
+            <td>@item.Department?.DepartmentName</td>
+            <td>
+                <a href="/contact/edit/@item.ContactId">Edit</a>
+                <a href="/contact/delete/@item.ContactId">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
