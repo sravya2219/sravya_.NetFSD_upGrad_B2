@@ -1,0 +1,29 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model week7Day3.Models.ContactInfo
+
+<h2>Add Contact</h2>
+
+<form method="post">
+    <label>ID:</label>
+    <input asp-for="ContactId" /><br />
+
+    <label>First Name:</label>
+    <input asp-for="FirstName" /><br />
+
+    <label>Last Name:</label>
+    <input asp-for="LastName" /><br />
+
+    <label>Company:</label>
+    <input asp-for="CompanyName" /><br />
+
+    <label>Email:</label>
+    <input asp-for="EmailId" /><br />
+
+    <label>Mobile:</label>
+    <input asp-for="MobileNo" /><br />
+
+    <label>Designation:</label>
+    <input asp-for="Designation" /><br />
+
+    <button type="submit">Save</button>
+</form>
