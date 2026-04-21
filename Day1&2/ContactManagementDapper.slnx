@@ -1,4 +1,0 @@
-<Solution>
-  <Project Path="AppUI/AppUI.csproj" />
-  <Project Path="DAL/DAL.csproj" />
-</Solution>
